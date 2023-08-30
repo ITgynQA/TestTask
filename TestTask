@@ -1,0 +1,25 @@
+"use strict";
+
+ function isPalindrome(value) {
+ 	let str = value.toLowerCase().replace(/\W/g, '');
+ 	const stringArray = [...str];
+ 	const newArray = [];
+ 	stringArray.forEach(index => {
+ 		newArray.unshift(index);
+ 	});
+ 	const reversedArray = newArray.join('');
+
+ 	if (str === reversedArray) {
+ 		console.log(value + ' - палиндром');
+ 	} else {
+ 		console.log(value + ' - не палиндром');
+ 	}
+ }
+
+ console.log(isPalindrome('«а роза упала на лапу Азора»'))
+ console.log(isPalindrome('1991'));
+ console.log(isPalindrome('"Don\'t nod"'));
+ console.log(isPalindrome('"No lemon, no melon"'));
+ console.log(isPalindrome('"Do it, Tido"'));
+ console.log(isPalindrome('12512'));
+ console.log(isPalindrome('112121'));
